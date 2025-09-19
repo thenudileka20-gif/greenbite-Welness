@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GreenBite</title>
+    <link rel="stylesheet" href="workout.css">
+    <script defer src="workout.js"></script>
+</head>
+<body>
+    <nav class="navbar">
+      <div class="logo">
+        <img src="C:\Users\Thenuki\OneDrive\Desktop\Wellness site\signal-2025-09-09-132748.png">
+      </div>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="recipes.html">Recipes</a></li>
+        <li><a href="calculator.html">Calculator</a></li>
+        <li><a href="workout.html">Workout</a></li>
+        <li><a href="mindfulness.html">Mindfulness</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        </ul>
+        <div class="hamburger" id="hamburger">☰</div>
+    </nav>
+
+    <div class="wourout-container">
+        <h1 class="page-title"><i class="fas fa-dumbbell"></i> Workout Generator</h1>
+        
+        <div class="workout-form">
+            <div class="form-group">
+                <h3>Target Body Part</h3>
+                <div class="selection-container" id="bodyPartSelection">
+                    <button type="button" class="selection-btn" data-value="arms">Arms</button>
+                    <button type="button" class="selection-btn" data-value="legs">Legs</button>
+                    <button type="button" class="selection-btn" data-value="core">Core</button>
+                    <button type="button" class="selection-btn" data-value="upperbody">Upper Body</button>
+                    <button type="button" class="selection-btn" data-value="fullbody">Full Body</button>
+                </div>
+            </div>
+            
+            <div class="form-group">
+                <h3>Available Equipment</h3>
+                <div class="selection-container" id="equipmentSelection">
+                    <button type="button" class="selection-btn" data-value="none">None</button>
+                    <button type="button" class="selection-btn" data-value="dumbbells">Dumbbells</button>
+                    <button type="button" class="selection-btn" data-value="resistancebands">Resistance Bands</button>
+                    <button type="button" class="selection-btn" data-value="kettlebell">Kettlebell</button>
+                    <button type="button" class="selection-btn" data-value="barbell">Barbell</button>
+                </div>
+            </div>
+            
+            <button id="generateBtn" class="generate-btn">Generate Workout</button>
+        </div>
+        
+        <div class="workout-plan" id="workoutPlan">
+            <div class="workout-header">
+                <h2 class="workout-title" id="workoutTitle">Your Custom Workout</h2>
+                <div class="timer-controls">
+                    <button id="startTimer" class="timer-btn">Start Workout</button>
+                    <button id="resetTimer" class="timer-btn">Reset</button>
+                </div>
+            </div>
+            
+            <div class="exercise-container" id="exerciseContainer"></div>
+        </div>
+    </div>
+
+    <audio id="timerSound" src="https://assets.mixkit.co/sfx/preview/mixkit-alarm-digital-clock-beep-989.mp3"></audio>
+    
+
+   
+    <footer>
+        <div class="newsletter">
+            <h3>Join Our Wellness Journey</h3>
+            <form id="newsletterForm">
+                <input type="email" id="emailInput" placeholder="Your email" required>
+                <button type="submit">Subscribe</button>
+            </form>
+            <p id="message"></p>
+        </div>
+        <p class="footer-bottom">&copy; 2025 GreenBite. All rights reserved.</p>
+    </footer>
+</body>
+</html>

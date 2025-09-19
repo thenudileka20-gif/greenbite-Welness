@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GreenBite</title>
+    <link rel="stylesheet" href="recipes.css">
+    <script defer src="recipes.js"></script>
+</head>
+    <nav class="navbar">
+        <div class="logo">
+            <img src="signal-2025-09-09-132748.png"alt="GreenBite Logo">
+        </div>
+        <ul class="nav-links" id="navLinks">
+            <li><a href="index.html" class="active">Home</a></li>
+            <li><a href="recipes.html">Recipes</a></li>
+            <li><a href="calculator.html">Calculator</a></li>
+            <li><a href="workout.html">Workout</a></li>
+            <li><a href="mindfulness.html">Mindfulness</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+        <div class="hamburger" id="hamburger">☰</div>
+    </nav>
+
+    <div class="page-title">
+        <h1>Healthy Recipes</h1>
+    </div>
+
+    <div class="controls">
+        <input type="text" id="search" placeholder="Search recipes...">
+        <select id="filter">
+            <option value="all">All Categories</option>
+            <option value="breakfast">Breakfast</option>
+            <option value="lunch">Lunch</option>
+            <option value="dinner">Dinner</option>
+            <option value="snack">Snacks</option>
+        </select>
+    </div>
+
+    <div class="recipe-container" id="recipeContainer"></div>
+
+    <!-- Recipe Modal -->
+    <div class="modal" id="recipeModal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <div class="modal-header">
+                <h2 id="modalTitle"></h2>
+                <img id="modalImage" src="" alt="">
+            </div>
+            <div class="modal-body">
+                <div class="ingredients">
+                    <h3>Ingredients</h3>
+                    <ul id="ingredientsList"></ul>
+                </div>
+                <div class="instructions">
+                    <h3>Instructions</h3>
+                    <ol id="instructionsList"></ol>
+                </div>
+                <div class="nutrition">
+                    <h3>Nutrition Info</h3>
+                    <table id="nutritionTable">
+                        <tr>
+                            <th>Calories</th>
+                            <th>Protein</th>
+                            <th>Carbs</th>
+                            <th>Fat</th>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+<footer>
+        <div class="newsletter">
+            <h3>Join Our Wellness Journey</h3>
+            <form id="newsletterForm">
+                <input type="email" id="emailInput" placeholder="Your email" required>
+                <button type="submit">Subscribe</button>
+            </form>
+            <p id="message"></p>
+        </div>
+        <p class="footer-bottom">&copy; 2025 GreenBite. All rights reserved.</p>
+    </footer>
+</body>
+</html>

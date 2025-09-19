@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GreenBite</title>
+    <link rel="stylesheet" href="mindfulness.css">
+    <script defer src="mindfulness.js"></script>
+</head>
+<body>
+    <!--Menubar-->
+    <nav class="navbar">
+        <div class="logo">
+            <img src="signal-2025-09-09-132748.png"alt="GreenBite Logo">
+        </div>
+        <ul class="nav-links" id="navLinks">
+            <li><a href="index.html" class="active">Home</a></li>
+            <li><a href="recipes.html">Recipes</a></li>
+            <li><a href="calculator.html">Calculator</a></li>
+            <li><a href="workout.html">Workout</a></li>
+            <li><a href="mindfulness.html">Mindfulness</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+        <div class="hamburger" id="hamburger">☰</div>
+    </nav>
+    <main class="mindfulness-container">
+            <h1 class="page-title"></i> Mindfulness Center</h1>
+                
+            <!-- Breathing Animation -->
+        <section class="breathing-section">
+            <h2>Guided Breathing</h2>
+            <div class="breathing-line-container">
+                <div class="breathing-line" id="breathingLine"></div>
+                <p id="breatheText">Ready to begin?</p>
+            </div>
+            <button id="startBreathing" class="breathing-btn"> Start Breathing</button>
+        </section>
+        
+        <div class="mindfulness-hero">
+            <img src="https://images.unsplash.com/photo-1545205597-3d9d02c29597" alt="Peaceful meditation scene">
+            <h1>Find Your Inner Peace</h1>
+        </div>
+
+        <!-- Meditation Timer -->
+        <section class="timer-section">
+            <h2>Meditation Timer</h2>
+            <div class="timer-display" id="timerDisplay">05:00</div>
+            <div class="timer-controls">
+                <button id="startTimer" class="timer-btn"> Start</button>
+                <button id="resetTimer" class="timer-btn">Reset</button>
+            </div>
+            <div class="timer-options">
+                <button class="time-option" data-minutes="1">1 min</button>
+                <button class="time-option" data-minutes="5">5 min</button>
+                <button class="time-option" data-minutes="10">10 min</button>
+            </div>
+        </section>
+
+        <!-- Ambient Sounds -->
+        <section class="sounds-section">
+            <h2>Ambient Sounds</h2>
+            <div class="sound-buttons">
+                <button class="sound-btn" data-sound="birds"> Birds</button>
+                <button class="sound-btn" data-sound="rain"> Rain</button>
+                <button class="sound-btn" data-sound="waves"> Ocean</button>
+            </div>
+        </section>
+
+        <!-- Session Tracker -->
+        <section class="session-tracker">
+            <h2>Your Progress</h2>
+            <div class="session-count">
+                <span id="sessionCount">0</span> sessions completed
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div class="newsletter">
+            <h3>Join Our Wellness Journey</h3>
+            <form id="newsletterForm">
+                <input type="email" id="emailInput" placeholder="Your email" required>
+                <button type="submit">Subscribe</button>
+            </form>
+            <p id="message"></p>
+        </div>
+        <p class="footer-bottom">&copy; 2025 GreenBite. All rights reserved.</p>
+    </footer>
+</body>
+</html>

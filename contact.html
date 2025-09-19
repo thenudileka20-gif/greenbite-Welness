@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GreenBite</title>
+    <link rel="stylesheet" href="contact.css">
+    <script src="contact.js"></script>
+</head>
+<body>
+    <!-- Menubar -->
+    <nav class="navbar">
+      <div class="logo">
+          <img src="signal-2025-09-09-132748.png" alt="GreenBite Logo">
+      </div>
+      <ul class="nav-links" id="navLinks">
+          <li><a href="index.html" class="active">Home</a></li>
+          <li><a href="recipes.html">Recipes</a></li>
+          <li><a href="calculator.html">Calculator</a></li>
+          <li><a href="workout.html">Workout</a></li>
+          <li><a href="mindfulness.html">Mindfulness</a></li>
+          <li><a href="contact.html">Contact</a></li>
+      </ul>
+      <div class="hamburger" id="hamburger">☰</div>
+    </nav>
+
+    <main>
+    <h1 class="page-title">Contact & Feedback</h1>
+
+    <!-- Feedback Form -->
+    <section class="form-section">
+      <h2>Send us your feedback</h2>
+      <form id="contactForm">
+        <input type="text" id="nameInput" placeholder="Your Name" required />
+        <input type="email" id="contactEmailInput" placeholder="Your Email" required /> 
+        <textarea id="messageInput" placeholder="Your Message" required></textarea>
+        <button type="submit">Send</button>
+      </form>
+      <p id="formMessage"></p>
+    </section>
+
+    <!-- Embedded Map -->
+    <section class="map-section">
+      <h2>GreenBite HQ</h2>
+      <iframe 
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3906.2934456853045!2d79.85891483828969!3d6.911729891849028!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ae2596ed863dcd5%3A0xe99b0e43319f85b4!2sGreen%20Path%2C%20Colombo!5e0!3m2!1sen!2slk!4v1758011124907!5m2!1sen!2slk"
+        width="100%" height="300" style="border:0;" 
+        allowfullscreen="" loading="lazy"></iframe>
+    </section>
+
+    <!--FAQ Accordions -->
+    <section class="faq-section">
+      <h2>Frequently Asked Questions</h2>
+      <div class="faq">
+        <button class="faq-question">What is GreenBite?</button>
+        <div class="faq-answer">GreenBite is your all-in-one healthy lifestyle website!</div>
+
+        <button class="faq-question">Is this site mobile friendly?</button>
+        <div class="faq-answer">Yes! All pages are responsive for phones and tablets.</div>
+
+        <button class="faq-question">How can I contact support?</button>
+        <div class="faq-answer">You can fill out the contact form above to reach us directly.</div>
+      </div>
+    </section>
+  </main>
+
+    <!-- FOOTER -->
+    <footer>
+      <div class="newsletter">
+        <h3>Join Our Wellness Journey</h3>
+        <form id="newsletterForm">
+          <input type="email" id="emailInput" placeholder="Your email" required>
+          <button type="submit">Subscribe</button>
+        </form>
+        <p id="message"></p>
+      </div>
+      <p class="footer-bottom">&copy; 2025 GreenBite. All rights reserved.</p>
+    </footer>
+</body>
+</html>

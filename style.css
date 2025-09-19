@@ -1,0 +1,214 @@
+/* ===== Colors ===== */
+:root {
+    --primary: #5E8C61;   /* Earthy green */
+    --secondary:  #A5D6A7; /* Warm beige */
+    --dark: #2C3E50;      /* Dark blue-gray */
+    --light: #F5F5F5;     /* Light background */
+    --accent: #E74C3C;  
+    --background: #FAFAFA;
+    --text: #424242;
+    --alert: #FF7043;
+}
+  /* Soft red for alerts */
+
+/* ===== Base Styles ===== */
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    background-color: var(--light);
+    color: var(--dark);
+    line-height: 1.6;
+}
+
+/* ===== Navigation ===== */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 5%;
+    background-color: var(--secondary);
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+.logo img {
+    height: 50px;
+}
+
+.nav-links {
+    display: flex;
+    gap: 1.5rem;
+    list-style: none;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: var(--dark);
+    font-weight: 500;
+    transition: color 0.3s;
+}
+
+.nav-links a:hover, .nav-links a.active {
+    color: var(--primary);
+}
+
+.hamburger {
+    font-size: 1.5rem;
+    cursor: pointer;
+    display: none;
+}
+
+/* ===== Hero Section ===== */
+.hero {
+    text-align: center;
+    padding: 2rem 5%;
+    background: linear-gradient(rgba(255,255,255,0.8), rgba(255,255,255,0.8)), 
+}
+
+.hero-text h1 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    color: var(--primary);
+}
+
+.dark-slogan {
+    color: var(--dark);
+    font-style: italic;
+    font-size: 1.2rem;
+    margin: 1rem 0;
+}
+
+.hero-img {
+    max-width: 20%;
+    border-radius: 10px;
+    margin-top: 1rem;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+ 
+/* ===== Daily Tip (Oval) ===== */
+.daily-tip-oval {
+    background-color: #4caf99;;
+    color: white;
+    padding: 1.5rem;
+    margin: 2rem 5%;
+    border-radius: 50% / 20%;
+    text-align: center;
+}
+
+.daily-tip-oval h2 {
+    margin-bottom: 0.5rem;
+    font-size: 1.3rem;
+}
+
+/* ===== Quick Links ===== */
+.quick-links {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1.5rem;
+    padding: 0 5% 3rem;
+}
+
+.card {
+    background: white;
+    border-radius: 10px;
+    padding: 1.5rem;
+    text-align: center;
+    text-decoration: none;
+    color: var(--dark);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+}
+
+.card img {
+    width: 95%;
+    height: 70%;
+    object-fit: contain;
+    margin-bottom: 2rem;
+}
+
+.card h3 {
+    font-size: 1.1rem;
+    color: var(--primary);
+}
+
+/* ===== Newsletter ===== */
+.newsletter {
+    text-align: center;
+    padding: 2rem 5%;
+    background-color: var(--dark);
+    color: white;
+}
+
+.newsletter h3 {
+    margin-bottom: 1rem;
+}
+
+#newsletterForm {
+    display: flex;
+    justify-content: center;
+    gap: 0;
+    max-width: 500px;
+    margin: 0 auto;
+}
+
+#emailInput {
+    padding: 0.8rem;
+    width: 70%;
+    border: none;
+    border-radius: 5px 0 0 5px;
+}
+
+#newsletterForm button {
+    padding: 0.8rem 1.5rem;
+    background-color: var(--primary);
+    color: white;
+    border: none;
+    border-radius: 0 5px 5px 0;
+    cursor: pointer;
+}
+
+#message {
+    margin-top: 1rem;
+    font-style: italic;
+}
+
+.footer-bottom {
+    text-align: center;
+    padding: 1rem;
+    background-color: var(--dark);
+    color: white;
+    font-size: 0.9rem;
+}
+
+/* ===== Mobile Responsiveness ===== */
+@media (max-width: 768px) {
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 70px;
+        right: 0;
+        width: 25%;
+        background-color: var(--light);
+        padding: 1rem ;
+        box-shadow: 0 5px 10px rgba(0,0,0,0.1);
+    }
+
+    .nav-links.active {
+        display: flex;
+    }
+
+    .hamburger {
+        display: block;
+    }
+
+    .quick-links {
+        grid-template-columns: 1fr 1fr;
+    }
+
+}
+
+
