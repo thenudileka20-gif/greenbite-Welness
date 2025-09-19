@@ -126,7 +126,7 @@ body {
     width: 95%;
     height: 70%;
     object-fit: contain;
-    margin-bottom: 2rem;
+    margin-bottom: 1rem;
 }
 
 .card h3 {
@@ -208,6 +208,18 @@ body {
     .quick-links {
         grid-template-columns: 1fr 1fr;
     }
+    .card img {
+    width: 95%;
+    height: 70%;
+    object-fit: contain;
+    margin-bottom: 0.1rem;
+    }
+
+    .card h3 {
+        font-size: 0.8rem;
+        color: var(--primary);
+    }
+
 
 }
 
