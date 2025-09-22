@@ -1,8 +1,9 @@
+/* Colours*/
 :root {
-    --primary: #5E8C61;   /* Earthy green */
-    --secondary:  #A5D6A7; /* Warm beige */
-    --dark: #2C3E50;      /* Dark blue-gray */
-    --light: #F5F5F5;     /* Light background */
+    --primary: #5E8C61;   
+    --secondary:  #A5D6A7; 
+    --dark: #2C3E50;      
+    --light: #F5F5F5;     
     --accent: #E74C3C;  
     --background: #FAFAFA;
     --text: #424242;
@@ -307,7 +308,7 @@ body {
     color: white;
 }
 
-/* Responsive */
+/* Responsive  adjustments*/
 @media (max-width: 768px) {
     .controls {
         flex-direction: column;

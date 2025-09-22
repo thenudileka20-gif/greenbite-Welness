@@ -1,15 +1,14 @@
-/* ===== Colors ===== */
+/*  Colors  */
 :root {
-    --primary: #5E8C61;   /* Earthy green */
-    --secondary:  #A5D6A7; /* Warm beige */
-    --dark: #2C3E50;      /* Dark blue-gray */
-    --light: #F5F5F5;     /* Light background */
+    --primary: #5E8C61;   
+    --secondary:  #A5D6A7; 
+    --dark: #2C3E50;      
+    --light: #F5F5F5;     
     --accent: #E74C3C;  
     --background: #FAFAFA;
     --text: #424242;
     --alert: #FF7043;
 }
-  /* Soft red for alerts */
 
 /* ===== Base Styles ===== */
 body {
@@ -84,7 +83,7 @@ body {
     box-shadow: 0 5px 15px rgba(0,0,0,0.1);
 }
  
-/* ===== Daily Tip (Oval) ===== */
+/* ===== Daily Tips ===== */
 .daily-tip-oval {
     background-color: #4caf99;;
     color: white;

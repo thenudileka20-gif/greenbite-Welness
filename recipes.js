@@ -1,16 +1,14 @@
-// ===== Newsletter Subscription =====
+// Newsletter
 document.getElementById("newsletterForm").addEventListener("submit", function(e) {
   e.preventDefault();
   const email = document.getElementById("emailInput").value;
-  
-  // Basic validation
+
   if (email.includes("@") && email.includes(".")) {
     localStorage.setItem("newsletterEmail", email);
     document.getElementById("message").textContent = "Thank you for subscribing!";
     document.getElementById("message").style.color = "#5E8C61";
-    document.getElementById("emailInput").value = ""; // Clear input
+    document.getElementById("emailInput").value = ""; 
     
-    // Hide message after 3 seconds
     setTimeout(() => {
       document.getElementById("message").textContent = "";
     }, 3000);
@@ -20,17 +18,14 @@ document.getElementById("newsletterForm").addEventListener("submit", function(e)
   }
 });
 
-// ===== Mobile Hamburger Menu =====
+// ===== Hamburger Menu =====
 document.getElementById("hamburger").addEventListener("click", function() {
   const navLinks = document.getElementById("navLinks");
   navLinks.classList.toggle("active");
   
-  // Change hamburger icon to X when open
   this.textContent = navLinks.classList.contains("active") ? "✕" : "☰";
 });
 
-
-// Close mobile menu if clicking outside
 document.addEventListener("click", function(e) {
 const navLinks = document.getElementById("navLinks");
 const hamburger = document.getElementById("hamburger");
@@ -42,7 +37,6 @@ if (!e.target.closest(".navbar") && navLinks.classList.contains("active")) {
 });
 
 
-  // Wait for DOM to be fully loaded
 document.addEventListener('DOMContentLoaded', function() {
     // Recipe data
     const recipes = [
@@ -217,7 +211,6 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     ];
 
-    // Get DOM elements
     const recipeContainer = document.getElementById('recipeContainer');
     const searchInput = document.getElementById('search');
     const filterSelect = document.getElementById('filter');
@@ -229,26 +222,21 @@ document.addEventListener('DOMContentLoaded', function() {
     const instructionsList = document.getElementById('instructionsList');
     const nutritionTable = document.getElementById('nutritionTable');
 
-    // Display all recipes initially
     displayRecipes(recipes);
 
-    // Search and filter functionality
     searchInput.addEventListener('input', filterRecipes);
     filterSelect.addEventListener('change', filterRecipes);
 
-    // Close modal when clicking X
     closeModal.addEventListener('click', function() {
         modal.style.display = 'none';
     });
 
-    // Close modal when clicking outside
     window.addEventListener('click', function(event) {
         if (event.target === modal) {
             modal.style.display = 'none';
         }
     });
 
-    // Function to display recipes
     function displayRecipes(recipesToDisplay) {
         recipeContainer.innerHTML = '';
         
@@ -272,7 +260,6 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
 
-    // Function to filter recipes
     function filterRecipes() {
         const searchTerm = searchInput.value.toLowerCase();
         const selectedCategory = filterSelect.value;
@@ -289,31 +276,30 @@ document.addEventListener('DOMContentLoaded', function() {
         displayRecipes(filteredRecipes);
     }
 
-    // Function to show recipe modal
     function showRecipeModal(recipe) {
         modalTitle.textContent = recipe.title;
         modalImage.src = recipe.image;
         modalImage.alt = recipe.title;
         
-        // Clear previous content
+        
         ingredientsList.innerHTML = '';
         instructionsList.innerHTML = '';
         
-        // Add ingredients
+      
         recipe.ingredients.forEach(ingredient => {
             const li = document.createElement('li');
             li.textContent = ingredient;
             ingredientsList.appendChild(li);
         });
         
-        // Add instructions
+      
         recipe.instructions.forEach(instruction => {
             const li = document.createElement('li');
             li.textContent = instruction;
             instructionsList.appendChild(li);
         });
         
-        // Add nutrition info
+      
         nutritionTable.innerHTML = `
             <tr>
                 <th>Calories</th>

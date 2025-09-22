@@ -3,14 +3,12 @@ document.getElementById("newsletterForm").addEventListener("submit", function(e)
   e.preventDefault();
   const email = document.getElementById("emailInput").value;
   
-  // Basic validation
   if (email.includes("@") && email.includes(".")) {
     localStorage.setItem("newsletterEmail", email);
     document.getElementById("message").textContent = "Thank you for subscribing!";
     document.getElementById("message").style.color = "#5E8C61";
     document.getElementById("emailInput").value = ""; // Clear input
     
-    // Hide message after 3 seconds
     setTimeout(() => {
       document.getElementById("message").textContent = "";
     }, 3000);
@@ -25,12 +23,9 @@ document.getElementById("hamburger").addEventListener("click", function() {
   const navLinks = document.getElementById("navLinks");
   navLinks.classList.toggle("active");
   
-  // Change hamburger icon to X when open
   this.textContent = navLinks.classList.contains("active") ? "✕" : "☰";
 });
 
-
-// Close mobile menu if clicking outside
 document.addEventListener("click", function(e) {
   const navLinks = document.getElementById("navLinks");
   const hamburger = document.getElementById("hamburger");
@@ -103,10 +98,9 @@ function initCalculatorPage() {
 
 // Update your DOMContentLoaded listener
 document.addEventListener('DOMContentLoaded', function() {
-    // Check if we're on the calculator page
+    
     if (document.getElementById('calorieForm')) {
         initCalculatorPage();
     }
     
-    // Your other page initializations...
 });
